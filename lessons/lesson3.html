@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson three</title>
+</head>
+<body>
+    <header>
+        <h1>welcome to lesson three</h1>
+    </header>
+    <main>
+        <h2>List of students information</h2>
+        <table border="2">
+            <tr>
+                <th>No</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+
+            </tr>
+            <tr>
+                 <td>1</td>
+                 <td>CIS240302</td>
+                 <td>Abdirahman</td>
+                 <td>apdirahman@gmail.com</td>
+            </tr>
+            
+        </table>
+        <header>
+            <h2>Student Registration Form</h2>
+        </header>
+        <form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate">
+    <br>
+    <label for="subscribe">Subscribe to newsletter:</label>
+    <input type="checkbox" id="subscribe" name="subscribe">
+    <br>
+    <p>Choose your favorite color:</p>
+    <label for="red">
+        <input type="radio" id="red" name="color" value="red"> Red
+    </label>
+    <label for="blue">
+        <input type="radio" id="blue" name="color" value="blue"> Blue
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
+    </main>
+    <footer>
+        <p>&copy;KALIMUU</p>
+    </footer>
+</body>
+</html>
