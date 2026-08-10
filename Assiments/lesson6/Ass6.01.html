@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+</head>
+<body>
+
+    <h2>Event Registration Form</h2>
+
+    <form action="#" method="post">
+
+        <!-- Full Name -->
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+        <!-- Event Date -->
+        <label for="event-date">Preferred Event Date:</label><br>
+        <input type="date" id="event-date" name="event-date" required><br><br>
+
+        <!-- Ticket Type -->
+        <p><strong>Ticket Type:</strong></p>
+
+        <input type="radio" id="general" name="ticket" value="General" required>
+        <label for="general">General</label><br>
+
+        <input type="radio" id="vip" name="ticket" value="VIP">
+        <label for="vip">VIP</label><br><br>
+
+        <!-- Terms and Conditions -->
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the event's Terms and Conditions</label><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>
