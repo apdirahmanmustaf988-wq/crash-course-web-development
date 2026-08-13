@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Feedback Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    form {
+      border: 1px solid #ccc;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    label,
+    legend {
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      display: block;
+      margin: 8px 0;
+    }
+
+    .radio-group input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .error {
+      color: #b00020;
+      font-size: 0.9rem;
+      margin-top: -10px;
+      margin-bottom: 12px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    input:focus,
+    textarea:focus,
+    button:focus {
+      outline: 3px solid #005fcc;
+      outline-offset: 2px;
+    }
+
+    [aria-invalid="true"] {
+      border: 2px solid #b00020;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <h1>Website Feedback Form</h1>
+
+    <p>
+      Please use this form to tell us about your experience with our website.
+    </p>
+
+    <form id="feedbackForm" novalidate>
+
+      <!-- Name -->
+      <div>
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          autocomplete="name"
+          required
+          aria-required="true"
+          aria-describedby="nameError"
+        >
+
+        <div id="nameError" class="error" role="alert"></div>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+          aria-required="true"
+          aria-describedby="emailError"
+        >
+
+        <div id="emailError" class="error" role="alert"></div>
+      </div>
+
+      <!-- Satisfaction -->
+      <fieldset>
+        <legend>How satisfied are you with our website? *</legend>
+
+        <div class="radio-group" id="satisfactionGroup">
+          <label>
+            <input
+              type="radio"
+              name="satisfaction"
+              value="Very satisfied"
+              required
+            >
+            Very satisfied
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="satisfaction"
+              value="Satisfied"
+            >
+            Satisfied
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="satisfaction"
+              value="Neutral"
+            >
+            Neutral
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="satisfaction"
+              value="Dissatisfied"
+            >
+            Dissatisfied
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="satisfaction"
+              value="Very dissatisfied"
+            >
+            Very dissatisfied
+          </label>
+        </div>
+
+        <div
+          id="satisfactionError"
+          class="error"
+          role="alert"
+          aria-live="polite"
+        ></div>
+      </fieldset>
+
+      <!-- Comments -->
+      <div>
+        <label for="comments">Comments <span aria-hidden="true">*</span></label>
+
+        <textarea
+          id="comments"
+          name="comments"
+          rows="6"
+          required
+          minlength="10"
+          aria-required="true"
+          aria-describedby="commentsHelp commentsError"
+        ></textarea>
+
+        <div id="commentsHelp">
+          Please enter at least 10 characters.
+        </div>
+
+        <div
+          id="commentsError"
+          class="error"
+          role="alert"
+        ></div>
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+
+      <p
+        id="successMessage"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById("feedbackForm");
+
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const commentsInput = document.getElementById("comments");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const commentsError = document.getElementById("commentsError");
+    const satisfactionError =
+      document.getElementById("satisfactionError");
+
+    const successMessage =
+      document.getElementById("successMessage");
+
+    function validateForm() {
+      let isValid = true;
+
+      // Clear previous errors
+      nameError.textContent = "";
+      emailError.textContent = "";
+      commentsError.textContent = "";
+      satisfactionError.textContent = "";
+
+      nameInput.removeAttribute("aria-invalid");
+      emailInput.removeAttribute("aria-invalid");
+      commentsInput.removeAttribute("aria-invalid");
+
+      // Validate name
+      if (nameInput.value.trim() === "") {
+        nameError.textContent = "Please enter your name.";
+        nameInput.setAttribute("aria-invalid", "true");
+        isValid = false;
+      }
+
+      // Validate email
+      if (emailInput.value.trim() === "") {
+        emailError.textContent = "Please enter your email address.";
+        emailInput.setAttribute("aria-invalid", "true");
+        isValid = false;
+      } else if (!emailInput.validity.valid) {
+        emailError.textContent =
+          "Please enter a valid email address, for example name@example.com.";
+        emailInput.setAttribute("aria-invalid", "true");
+        isValid = false;
+      }
+
+      // Validate satisfaction
+      const satisfaction =
+        document.querySelector('input[name="satisfaction"]:checked');
+
+      if (!satisfaction) {
+        satisfactionError.textContent =
+          "Please select a satisfaction rating.";
+        isValid = false;
+      }
+
+      // Validate comments
+      if (commentsInput.value.trim() === "") {
+        commentsError.textContent = "Please enter your comments.";
+        commentsInput.setAttribute("aria-invalid", "true");
+        isValid = false;
+      } else if (commentsInput.value.trim().length < 10) {
+        commentsError.textContent =
+          "Your comments must contain at least 10 characters.";
+        commentsInput.setAttribute("aria-invalid", "true");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      successMessage.textContent = "";
+
+      if (validateForm()) {
+        successMessage.textContent =
+          "Thank you! Your feedback has been submitted successfully.";
+
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
