@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Headers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MAIN WRAPPER
+========================= */
+
+.content-wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    background: white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   STICKY HEADER
+========================= */
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+
+    padding: 20px 25px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 24px;
+
+    z-index: 10;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Different header colors */
+
+section:nth-child(2) .sticky-header {
+    background: #7c3aed;
+}
+
+section:nth-child(3) .sticky-header {
+    background: #059669;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    padding: 30px;
+}
+
+
+.content p {
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .content-wrapper {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .sticky-header {
+        font-size: 19px;
+        padding: 16px 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+
+        <!-- Section 1 -->
+        <section>
+            <h2 class="sticky-header">Section 1: Overview</h2>
+
+            <div class="content">
+                <p>
+                    Welcome to the overview section. This page demonstrates
+                    how CSS sticky positioning works.
+                </p>
+
+                <p>
+                    When you scroll down, this header will remain at the top
+                    of the screen until the next section arrives.
+                </p>
+
+                <p>
+                    Sticky positioning is useful for navigation menus,
+                    section titles, and other important information.
+                </p>
+
+                <p>
+                    Keep scrolling to see the next section take over.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Section 2 -->
+        <section>
+            <h2 class="sticky-header">Section 2: Details</h2>
+
+            <div class="content">
+                <p>
+                    This section contains more detailed information about
+                    the topic.
+                </p>
+
+                <p>
+                    The header stays visible while you read the content
+                    inside this section.
+                </p>
+
+                <p>
+                    CSS position sticky combines features of relative and
+                    fixed positioning.
+                </p>
+
+                <p>
+                    Scroll further to see Section 3.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Section 3 -->
+        <section>
+            <h2 class="sticky-header">Section 3: Specifications</h2>
+
+            <div class="content">
+                <p>
+                    Here you can find the specifications and final details.
+                </p>
+
+                <p>
+                    The sticky header remains at the top while this section
+                    is being viewed.
+                </p>
+
+                <p>
+                    Once the section ends, its header scrolls away naturally.
+                </p>
+
+                <p>
+                    This is the basic behavior of position sticky.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
+```

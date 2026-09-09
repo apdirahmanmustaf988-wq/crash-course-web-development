@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamzam University</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f8;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Logo meesha yar ayuu ku ekaanayaa */
+
+.logo {
+    width: 90px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 70px;
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+/* Menu right corner */
+
+.menu {
+    list-style: none;
+
+    display: flex;
+    gap: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 10px 18px;
+
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    background: #19b7bd;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    /*
+       Sawirka hal mar oo keliya ayuu soo muuqanayaa.
+       repeat ma jiro.
+    */
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("/image/WhatsApp\ Image\ 2026-09-09\ at\ 18.42.26.jpeg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+}
+
+
+.hero-content {
+    max-width: 850px;
+    padding: 30px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-btn,
+.about-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #19b7bd;
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover,
+.about-btn:hover {
+    background: #128f95;
+    transform: translateY(-2px);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    max-width: 1150px;
+
+    margin: 80px auto;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.about-text {
+    padding: 20px;
+}
+
+.small-title,
+.section-heading span {
+    color: #19aeb4;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.about-text h2,
+.section-heading h2 {
+    font-size: 38px;
+
+    margin: 12px 0 20px;
+
+    color: #222;
+}
+
+
+.about-text h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    background: #19b7bd;
+
+    margin-top: 12px;
+}
+
+
+.about-text p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+.about-btn {
+    margin-top: 10px;
+}
+
+
+.about-image {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.about-image img {
+    
+
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+
+    background: white;
+
+    padding: 80px 7%;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 10px;
+}
+
+
+.section-heading p {
+    color: #777;
+}
+
+
+.testimonial-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.testimonial-card {
+
+    background: #f5f9fa;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e4eeee;
+
+    transition: 0.3s;
+}
+
+
+.testimonial-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+.profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.profile-image {
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 3px solid #19b7bd;
+}
+
+
+.profile-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.profile h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+.profile p {
+    color: #19aeb4;
+
+    font-size: 13px;
+}
+
+
+.review {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    font-style: italic;
+}
+
+
+/* ================= SERVICES ================= */
+
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #102a2d;
+
+    color: white;
+
+    padding-top: 55px;
+}
+
+
+.footer-content {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 0 25px 40px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+.footer-content h2 {
+    color: #19c0c6;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-content h3 {
+
+    margin-bottom: 15px;
+}
+
+
+.footer-content p {
+
+    color: #b8c7c8;
+
+    line-height: 1.7;
+
+    margin-bottom: 7px;
+}
+
+
+.footer-content a {
+
+    display: block;
+
+    color: #b8c7c8;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-content a:hover {
+
+    color: #19c0c6;
+}
+
+
+.copyright {
+
+    text-align: center;
+
+    border-top: 1px solid #294346;
+
+    padding: 20px;
+
+    color: #9fb0b1;
+
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 15px 5%;
+
+    }
+
+    .menu {
+
+        gap: 0;
+    }
+
+    .menu li a {
+
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+
+    .hero {
+
+        min-height: 380px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 27px;
+    }
+
+
+    .hero-content p {
+
+        font-size: 15px;
+    }
+
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        margin: 50px auto;
+    }
+
+
+    .about-image img {
+
+        height: 280px;
+    }
+
+
+    .testimonial-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .service-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="/image/WhatsApp Image 2026-09-09 at 18.42.27.jpeg" alt="Zamzam University Logo">
+        </div>
+
+        <!-- Menu -->
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>WELCOME TO ZAMZAM UNIVERSITY</h1>
+
+            <p>
+                Welcome to Zamzam University of Science and Technology.
+                We provide quality education and prepare students for
+                a successful future through knowledge and technology.
+            </p>
+
+          
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+        <div class="about-text">
+
+            <span class="small-title">WHO WE ARE</span>
+
+            <h2>About Us</h2>
+
+            <p>
+                Zamzam University of Science and Technology is committed
+                to providing quality education and developing talented
+                students. Our university focuses on knowledge, technology,
+                innovation and professional development.
+            </p>
+
+            <p>
+                We believe that education is the foundation of a better
+                future. Our students receive an environment where they
+                can learn, develop their skills and achieve their goals.
+            </p>
+
+           
+
+        </div>
+
+
+        <div class="about-image">
+
+            <!-- Ku beddel about.jpg sawirka aad rabto -->
+            <img src="/image/WhatsApp Image 2026-09-09 at 18.52.20.jpeg" alt="About Zamzam University">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials">
+
+        <div class="section-heading">
+
+            <span>STUDENT REVIEWS</span>
+
+            <h2>Testimonials</h2>
+
+            <p>
+                What our students say about their experience with us.
+            </p>
+
+        </div>
+
+
+        <div class="testimonial-container">
+
+            <!-- Profile 1 -->
+            <div class="testimonial-card">
+
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="/image/#Prompt👇🏽👇🏽.jpg" alt="Student">
+                    </div>
+
+                    <div>
+                        <h3>Abdirahman</h3>
+                        <p>Software Engineering Student</p>
+                    </div>
+                </div>
+
+                <p class="review">
+                    "The university has helped me improve my knowledge
+                    and develop important skills for my future career."
+                </p>
+
+            </div>
+
+
+            <!-- Profile 2 -->
+            <div class="testimonial-card">
+
+                <div class="profile">
+
+                    <div class="profile-image">
+                        <img src="/image/download.jpg" alt="Student">
+                    </div>
+
+                    <div>
+                        <h3>Mohamed</h3>
+                        <p>Information Technology Student</p>
+                    </div>
+
+                </div>
+
+                <p class="review">
+                    "I enjoy learning new technologies and working with
+                    experienced teachers. The environment is very helpful."
+                </p>
+
+            </div>
+
+
+            <!-- Profile 3 -->
+            <div class="testimonial-card">
+
+                <div class="profile">
+
+                    <div class="profile-image">
+                        <img src="/image/Modern Professional Headshot Ideas _ Corporate Styling for Women in BusinessWoman Outfit ideas.jpg" alt="Student">
+                    </div>
+
+                    <div>
+                        <h3>Hodan</h3>
+                        <p>Business Student</p>
+                    </div>
+
+                </div>
+
+                <p class="review">
+                    "My experience at the university has been excellent.
+                    I have learned many things that will help my career."
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+            
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-content">
+
+           
+
+        <div class="copyright">
+            <p>© 2026 Zamzam University. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
+</body>
+</html>

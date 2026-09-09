@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Feature</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+/* =========================
+   GENERAL PAGE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    width: 300px;
+    margin: 0 auto 60px;
+
+    background-image: url("card-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 30px 20px;
+    border-radius: 20px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.profile-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Keep content above overlay */
+.profile-card img,
+.profile-card h3,
+.profile-card p {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Profile Photo */
+.profile-card img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border: 4px solid white;
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+
+/* Name */
+.profile-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+
+/* Job */
+.profile-card p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   FEATURE SECTION
+========================= */
+
+.feature-section {
+    max-width: 900px;
+    min-height: 350px;
+
+    margin: auto;
+
+    background-color: #172554;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("offer-background.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Feature Content */
+.feature-content {
+    max-width: 600px;
+}
+
+
+/* Feature Heading */
+.feature-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+
+/* Feature Paragraph */
+.feature-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Button */
+.feature-content button {
+    border: none;
+
+    padding: 13px 28px;
+
+    background-color: white;
+    color: #172554;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Button Hover */
+.feature-content button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .profile-card {
+        width: 90%;
+    }
+
+    .feature-section {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .feature-content h2 {
+        font-size: 30px;
+    }
+
+    .feature-content p {
+        font-size: 16px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <img src="/Assiments/Lesson1/image/Ein professionelles Bewerbungsfoto ist der Schlüssel zu einem starken ersten Eindruck! 📸 Der richti.jpg" alt="Profile image">
+
+        <h3>KALIMUU</h3>
+        <p>Web Developer</p>
+    </div>
+
+
+    <!-- Feature Section -->
+    <div class="feature-section">
+        <div class="feature-content">
+            <h2>Special Offer</h2>
+            <p>
+                Don't miss out on our exclusive deal
+                available this week only!
+            </p>
+
+            <button>Learn More</button>
+        </div>
+    </div>
+
+</body>
+</html>
+```

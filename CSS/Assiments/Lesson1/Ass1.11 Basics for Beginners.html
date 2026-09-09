@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        
+
+   
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    padding: 50px 30px;
+    color: #222;
+}
+
+/* DIV 1 - Block */
+#div1 {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    background: lightblue;
+    border-left: 6px solid #2196f3;
+    border-radius: 12px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* SPAN 1 - Inline */
+#span1 {
+    display: inline;
+
+    background: coral;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* DIV 2 - Hidden */
+#div2 {
+    display: none;
+}
+
+/* SPAN 2 - Block */
+#span2 {
+    display: block;
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 25px;
+
+    background: #ffe66d;
+    border-left: 6px solid #f1c40f;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover effect */
+#div1:hover,
+#span2:hover {
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    #div1,
+    #span2 {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    #span1 {
+        font-size: 15px;
+    }
+}
+
+
+
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display Property Exercise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="div1">This div is a block-level element by default. It should fill the width of the screen and have a light blue background.</div>
+    <span id="span1">This span is an inline element by default and should display inline with a coral background.</span>
+    <div id="div2">This div should be hidden using CSS.</div>
+    <span id="span2">This span should be displayed as a block element and fill the width of the screen with a yellow background.</span>
+</body>
+</html>
