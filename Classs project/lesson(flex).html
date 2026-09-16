@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+
+    <style>
+        .media-player{
+            display: flex;
+            
+        }
+        .control-button{
+            flex: 1;
+        } 
+
+     
+        .play{
+            flex: 2;
+        }
+
+      .flex-nav{
+        background-color: lightblue;
+        display: flex;
+        justify-content: space-between;
+        
+      }
+.flex-nav {
+    display: flex;
+    justify-content: space-between; /* Even spacing between items */
+    align-items: center;            /* Vertical alignment */
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo-container img {
+    height: 50px; /* Responsive logo height */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.action-container button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.action-container button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+
+    <!-- <div class="media-player">
+    <button class="control-button prev">Prev</button>
+    <button class="control-button play">Play</button>
+    <button class="control-button next">Next</button>
+</div> -->
+
+
+<nav class="flex-nav">
+    <div class="logo-container">
+       
+        <h2>Zust Logo</h2>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="action-container">
+        <button onclick="location.href='#login';">Login</button>
+    </div>
+</nav>
+
+
+
+    
+</body>
+</html>
