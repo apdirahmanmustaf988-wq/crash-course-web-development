@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 2fr 2fr 2fr; */
+            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-rows: 1fr 1fr ; */
+            grid-template-rows: repeat(2, 1fr);  
+        }
+        .box{
+            background-color:cyan;
+            padding: 20px;
+            margin: 10px;
+            gap: 10px;
+        }
+        .box1{
+            grid-column: 1 / span 2; /*wuxuu kufidaa column1 ilaa column2*/
+            grid-row: 1 / span 2;   /*wuxuu kufidaa row1 ilaa row2*/
+            
+        }
+        .box2{
+           grid-column: 3 / span 2;
+
+        }
+        .box3{
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">box 1</div>
+        <div class="box box2">box 2</div>
+        <div class="box box3">box 3</div>
+        <div class="box box4">box 4</div>
+        
+        
+    </div>
+</body>
+</html>
